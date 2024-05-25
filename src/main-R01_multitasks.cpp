@@ -1,10 +1,10 @@
 #include <Arduino.h>
 
 #ifndef MULTITASKS
-#define LED1_PIN = 23;
-#define LED2_PIN = 22;
-#define LED1_DELAY = 500;
-#define LED2_DELAY = 1000;
+#define LED1_PIN 23
+#define LED2_PIN 22
+#define LED1_DELAY 500
+#define LED2_DELAY 1000
 #endif
 
 typedef struct {
