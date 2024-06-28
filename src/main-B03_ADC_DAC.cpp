@@ -19,7 +19,7 @@ void loop() {
   // analogWrite(DAC_PIN, dac_value); // 不可以用analogWrite，它是PWM信号
   dacWrite(DAC_PIN, dac_value);
 
-  // int adc_value = analogRead(ADC_PIN); 
+  // int adc_value = analogRead(ADC_PIN);  // ref of adc: https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/api/adc.html
   // float vin = (adc_value / 4095.0) * 3.3; // ESP32的ADC范围能达到3.3V
   float vin = analogReadMilliVolts(ADC_PIN) / 1000.0; // 量程不会达到3.3V，最高一般2500mv
   Serial.printf("Vin = %0.2f V\n", vin);

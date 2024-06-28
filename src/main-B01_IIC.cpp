@@ -31,7 +31,7 @@ void setup()
   Serial.begin(115200);
 
   Wire.begin(IICPIN_SDA, IICPIN_SCL);
-
+  delay(100); // It is important to wait for the I2C to be ready. (Bug: ADS1115)
   // IIC Scanner
   Serial.println("\n[I2C Scanner]");
   byte error, address;
